@@ -1,16 +1,25 @@
 # SeismoLab
 
-Desktop Seismic Processing Software
+Desktop Seismology Software built with Python, ObsPy, and PySide6.
 
-## Built With
+## Features
+
+- Open MiniSEED
+- Open SAC
+- Waveform Viewer
+- Bandpass Filter
+- FFT (Coming Soon)
+- Spectrogram (Coming Soon)
+
+## Technology
 
 - Python
 - ObsPy
 - PySide6
-- NumPy
-- SciPy
 - Matplotlib
+- NumPy
 
-## Version
+## Author
 
-v1.0.0
+Bragi Yusuf
+Geophysics Student - Universitas Gadjah Mada

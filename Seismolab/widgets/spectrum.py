@@ -13,7 +13,7 @@ from PySide6.QtWidgets import (
 )
 
 
-class WaveformWidget(QWidget):
+class SpectrumWidget(QWidget):
 
     def __init__(self):
 
@@ -67,9 +67,6 @@ class WaveformWidget(QWidget):
         )
 
 
-        self.current_trace = None
-
-
         self.reset_axes()
 
 
@@ -84,12 +81,12 @@ class WaveformWidget(QWidget):
 
 
         self.ax.set_title(
-            "Waveform"
+            "Frequency Spectrum"
         )
 
 
         self.ax.set_xlabel(
-            "Time (s)"
+            "Frequency (Hz)"
         )
 
 
@@ -108,58 +105,36 @@ class WaveformWidget(QWidget):
 
 
     # ==================================================
-    # Plot Single Trace
+    # Plot FFT Result
     # ==================================================
 
-    def plot_trace(self, trace):
-
-
-        if trace is None:
-
-            self.reset_axes()
-
-            return
-
-
-
-        self.current_trace = trace
-
+    def plot_spectrum(
+        self,
+        frequency,
+        amplitude,
+        title="FFT Spectrum"
+    ):
 
 
         self.ax.clear()
 
 
 
-        data = trace.data.astype(
-            float
-        )
-
-
-        fs = trace.stats.sampling_rate
-
-
-
-        time = np.arange(
-            len(data)
-        ) / fs
-
-
-
         self.ax.plot(
-            time,
-            data,
+            frequency,
+            amplitude,
             linewidth=0.8
         )
 
 
 
         self.ax.set_title(
-            trace.id
+            title
         )
 
 
         self.ax.set_xlabel(
-            "Time (s)"
+            "Frequency (Hz)"
         )
 
 
@@ -177,41 +152,3 @@ class WaveformWidget(QWidget):
 
 
         self.canvas.draw()
-
-
-
-    # ==================================================
-    # Plot Stream
-    # ==================================================
-
-    def plot_stream(self, stream, index=0):
-
-
-        if stream is None:
-
-            self.reset_axes()
-
-            return
-
-
-
-        if len(stream) == 0:
-
-            self.reset_axes()
-
-            return
-
-
-
-        if index >= len(stream):
-
-            index = 0
-
-
-
-        trace = stream[index]
-
-
-        self.plot_trace(
-            trace
-        )
