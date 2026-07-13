@@ -1,0 +1,130 @@
+[33m0808fac[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m SeismoLab v1.6 Event Catalog System
+ Seismolab/README.md                                |  21 [32m+[m[31m-[m
+ .../core/__pycache__/database.cpython-314.pyc      | Bin [31m0[m -> [32m4230[m bytes
+ Seismolab/core/__pycache__/event.cpython-314.pyc   | Bin [31m0[m -> [32m2440[m bytes
+ Seismolab/core/__pycache__/fft.cpython-314.pyc     | Bin [31m0[m -> [32m1909[m bytes
+ Seismolab/core/__pycache__/psd.cpython-314.pyc     | Bin [31m0[m -> [32m1542[m bytes
+ Seismolab/core/__pycache__/session.cpython-314.pyc | Bin [31m1987[m -> [32m2378[m bytes
+ .../core/__pycache__/spectrogram.cpython-314.pyc   | Bin [31m0[m -> [32m1308[m bytes
+ Seismolab/core/__pycache__/trigger.cpython-314.pyc | Bin [31m0[m -> [32m1612[m bytes
+ Seismolab/core/database.py                         | 277 [32m+++++++[m
+ Seismolab/core/event.py                            | 201 [32m+++++[m
+ Seismolab/core/fft.py                              |  95 [32m+++[m
+ Seismolab/core/psd.py                              |  74 [32m++[m
+ Seismolab/core/session.py                          | 135 [32m+++[m[31m-[m
+ Seismolab/core/spectogram.py                       |   0
+ Seismolab/core/spectrogram.py                      |  58 [32m++[m
+ Seismolab/core/trigger.py                          | 104 [32m+++[m
+ Seismolab/events.db                                | Bin [31m0[m -> [32m12288[m bytes
+ Seismolab/main.py                                  |  23 [32m+[m[31m-[m
+ Seismolab/ui/__pycache__/console.cpython-314.pyc   | Bin [31m0[m -> [32m1615[m bytes
+ Seismolab/ui/__pycache__/icons.cpython-314.pyc     | Bin [31m0[m -> [32m561[m bytes
+ .../ui/__pycache__/main_window.cpython-314.pyc     | Bin [31m7884[m -> [32m15158[m bytes
+ Seismolab/ui/__pycache__/theme.cpython-314.pyc     | Bin [31m0[m -> [32m1044[m bytes
+ Seismolab/ui/__pycache__/toolbar.cpython-314.pyc   | Bin [31m1292[m -> [32m2058[m bytes
+ Seismolab/ui/console.py                            |  70 [32m++[m
+ Seismolab/ui/icons.py                              |  32 [32m+[m
+ Seismolab/ui/main_window.py                        | 806 [32m+++++++++++++++++++[m[31m--[m
+ Seismolab/ui/theme.py                              | 118 [32m+++[m
+ Seismolab/ui/toolbar.py                            |  89 [32m++[m[31m-[m
+ .../__pycache__/event_browser.cpython-314.pyc      | Bin [31m0[m -> [32m3309[m bytes
+ .../widgets/__pycache__/fft_window.cpython-314.pyc | Bin [31m0[m -> [32m1802[m bytes
+ .../widgets/__pycache__/picker.cpython-314.pyc     | Bin [31m0[m -> [32m3479[m bytes
+ .../__pycache__/picker_window.cpython-314.pyc      | Bin [31m0[m -> [32m1653[m bytes
+ Seismolab/widgets/__pycache__/psd.cpython-314.pyc  | Bin [31m0[m -> [32m2420[m bytes
+ .../widgets/__pycache__/psd_window.cpython-314.pyc | Bin [31m0[m -> [32m1778[m bytes
+ .../__pycache__/spectrogram.cpython-314.pyc        | Bin [31m0[m -> [32m2440[m bytes
+ .../__pycache__/spectrogram_window.cpython-314.pyc | Bin [31m0[m -> [32m1751[m bytes
+ .../widgets/__pycache__/spectrum.cpython-314.pyc   | Bin [31m0[m -> [32m3293[m bytes
+ .../widgets/__pycache__/trace_tree.cpython-314.pyc | Bin [31m0[m -> [32m2337[m bytes
+ .../__pycache__/trigger_window.cpython-314.pyc     | Bin [31m0[m -> [32m2207[m bytes
+ .../widgets/__pycache__/waveform.cpython-314.pyc   | Bin [31m3486[m -> [32m4196[m bytes
+ Seismolab/widgets/event_browser.py                 | 229 [32m++++++[m
+ Seismolab/widgets/fft_window.py                    |  70 [32m++[m
+ Seismolab/widgets/picker.py                        | 179 [32m+++++[m
+ Seismolab/widgets/picker_window.py                 |  71 [32m++[m
+ Seismolab/widgets/psd.py                           | 124 [32m++++[m
+ Seismolab/widgets/psd_window.py                    |  76 [32m++[m
+ Seismolab/widgets/spectrogram.py                   | 115 [32m+++[m
+ Seismolab/widgets/spectrogram_window.py            |  69 [32m++[m
+ Seismolab/widgets/spectrum.py                      | 154 [32m+[33m0808fac[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m SeismoLab v1.6 Event Catalog System
+ Seismolab/README.md                                |  21 [32m+[m[31m-[m
+ .../core/__pycache__/database.cpython-314.pyc      | Bin [31m0[m -> [32m4230[m bytes
+ Seismolab/core/__pycache__/event.cpython-314.pyc   | Bin [31m0[m -> [32m2440[m bytes
+ Seismolab/core/__pycache__/fft.cpython-314.pyc     | Bin [31m0[m -> [32m1909[m bytes
+ Seismolab/core/__pycache__/psd.cpython-314.pyc     | Bin [31m0[m -> [32m1542[m bytes
+ Seismolab/core/__pycache__/session.cpython-314.pyc | Bin [31m1987[m -> [32m2378[m bytes
+ .../core/__pycache__/spectrogram.cpython-314.pyc   | Bin [31m0[m -> [32m1308[m bytes
+ Seismolab/core/__pycache__/trigger.cpython-314.pyc | Bin [31m0[m -> [32m1612[m bytes
+ Seismolab/core/database.py                         | 277 [32m+++++++[m
+ Seismolab/core/event.py                            | 201 [32m+++++[m
+ Seismolab/core/fft.py                              |  95 [32m+++[m
+ Seismolab/core/psd.py                              |  74 [32m++[m
+ Seismolab/core/session.py                          | 135 [32m+++[m[31m-[m
+ Seismolab/core/spectogram.py                       |   0
+ Seismolab/core/spectrogram.py                      |  58 [32m++[m
+ Seismolab/core/trigger.py                          | 104 [32m+++[m
+ Seismolab/events.db                                | Bin [31m0[m -> [32m12288[m bytes
+ Seismolab/main.py                                  |  23 [32m+[m[31m-[m
+ Seismolab/ui/__pycache__/console.cpython-314.pyc   | Bin [31m0[m -> [32m1615[m bytes
+ Seismolab/ui/__pycache__/icons.cpython-314.pyc     | Bin [31m0[m -> [32m561[m bytes
+ .../ui/__pycache__/main_window.cpython-314.pyc     | Bin [31m7884[m -> [32m15158[m bytes
+ Seismolab/ui/__pycache__/theme.cpython-314.pyc     | Bin [31m0[m -> [32m1044[m bytes
+ Seismolab/ui/__pycache__/toolbar.cpython-314.pyc   | Bin [31m1292[m -> [32m2058[m bytes
+ Seismolab/ui/console.py                            |  70 [32m++[m
+ Seismolab/ui/icons.py                              |  32 [32m+[m
+ Seismolab/ui/main_window.py                        | 806 [32m+++++++++++++++++++[m[31m--[m
+ Seismolab/ui/theme.py                              | 118 [32m+++[m
+ Seismolab/ui/toolbar.py                            |  89 [32m++[m[31m-[m
+ .../__pycache__/event_browser.cpython-314.pyc      | Bin [31m0[m -> [32m3309[m bytes
+ .../widgets/__pycache__/fft_window.cpython-314.pyc | Bin [31m0[m -> [32m1802[m bytes
+ .../widgets/__pycache__/picker.cpython-314.pyc     | Bin [31m0[m -> [32m3479[m bytes
+ .../__pycache__/picker_window.cpython-314.pyc      | Bin [31m0[m -> [32m1653[m bytes
+ Seismolab/widgets/__pycache__/psd.cpython-314.pyc  | Bin [31m0[m -> [32m2420[m bytes
+ .../widgets/__pycache__/psd_window.cpython-314.pyc | Bin [31m0[m -> [32m1778[m bytes
+ .../__pycache__/spectrogram.cpython-314.pyc        | Bin [31m0[m -> [32m2440[m bytes
+ .../__pycache__/spectrogram_window.cpython-314.pyc | Bin [31m0[m -> [32m1751[m bytes
+ .../widgets/__pycache__/spectrum.cpython-314.pyc   | Bin [31m0[m -> [32m3293[m bytes
+ .../widgets/__pycache__/trace_tree.cpython-314.pyc | Bin [31m0[m -> [32m2337[m bytes
+ .../__pycache__/trigger_window.cpython-314.pyc     | Bin [31m0[m -> [32m2207[m bytes
+ .../widgets/__pycache__/waveform.cpython-314.pyc   | Bin [31m3486[m -> [32m4196[m bytes
+ Seismolab/widgets/event_browser.py                 | 229 [32m++++++[m
+ Seismolab/widgets/fft_window.py                    |  70 [32m++[m
+ Seismolab/widgets/picker.py                        | 179 [32m+++++[m
+ Seismolab/widgets/picker_window.py                 |  71 [32m++[m
+ Seismolab/widgets/psd.py                           | 124 [32m++++[m
+ Seismolab/widgets/psd_window.py                    |  76 [32m++[m
+ Seismolab/widgets/spectrogram.py                   | 115 [32m+++[m
+ Seismolab/widgets/spectrogram_window.py            |  69 [32m++[m
+ Seismolab/widgets/spectrum.py                      | 154 [32m++++[m
+ Seismolab/widgets/trace_tree.py                    |  62 [32m++[m
+ Seismolab/widgets/trigger_window.py                | 104 [32m+++[m
+ Seismolab/widgets/waveform.py                      | 185 [32m++++[m[31m-[m
+ 52 files changed, 3430 insertions(+), 111 deletions(-)
+[33m20eae33[m[33m ([m[1;31morigin/main[m[33m)[m first commit
+ Seismolab/README.md                                |  16 [32m++[m
+ Seismolab/controllers/processing_controller.py     |  54 [32m+++++[m
+ .../core/__pycache__/processor.cpython-314.pyc     | Bin [31m0[m -> [32m830[m bytes
+ Seismolab/core/__pycache__/reader.cpython-314.pyc  | Bin [31m0[m -> [32m650[m bytes
+ Seismolab/core/__pycache__/session.cpython-314.pyc | Bin [31m0[m -> [32m1987[m bytes
+ Seismolab/core/exporter.py                         |   0
+ Seismolab/core/fft.py                              |   0
+ Seismolab/core/filters.py                          |   0
+ Seismolab/core/picker.py                           |   0
+ Seismolab/core/processor.py                        |  20 [32m++[m
+ Seismolab/core/reader.py                           |   8 [32m+[m
+ Seismolab/core/session.py                          |  50 [32m+++++[m
+ Seismolab/core/spectogram.py                       |   0
+ Seismolab/main.py                                  |  17 [32m++[m
+ Seismolab/requirements.txt                         |   5 [32m+[m
+ .../ui/__pycache__/filter_dialog.cpython-314.pyc   | Bin [31m0[m -> [32m3404[m bytes
+ .../ui/__pycache__/main_window.cpython-314.pyc     | Bin [31m0[m -> [32m7884[m bytes
+ Seismolab/ui/__pycache__/toolbar.cpython-314.pyc   | Bin [31m0[m -> [32m1292[m bytes
+ Seismolab/ui/about.py                              |   0
+ Seismolab/ui/dialogs.py                            |   0
+ Seismolab/ui/filter_dialog.py                      |  68 [32m++++++[m
+ Seismolab/ui/main_window.py                        | 235 [32m+++++++++++++++++++++[m
+ Seismolab/ui/toolbar.py                            |  17 [32m++[m
+ .../widgets/__pycache__/waveform.cpython-314.pyc   | Bin [31m0[m -> [32m3486[m bytes
+ Seismolab/widgets/waveform.py                      |  86 [32m++++++++[m
+ 25 files changed, 576 insertions(+)
